@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA6E822618E60461009AC2E9 /* SKNode+CDYResizing.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6E822518E60461009AC2E9 /* SKNode+CDYResizing.m */; };
 		EAC3D40418E2A56C00D20AB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC3D40318E2A56C00D20AB2 /* Foundation.framework */; };
 		EAC3D40618E2A56C00D20AB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC3D40518E2A56C00D20AB2 /* CoreGraphics.framework */; };
 		EAC3D40818E2A56C00D20AB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC3D40718E2A56C00D20AB2 /* UIKit.framework */; };
@@ -20,9 +21,15 @@
 		EAC3D42218E2A56C00D20AB2 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC3D42118E2A56C00D20AB2 /* MyScene.m */; };
 		EAC3D42418E2A56C00D20AB2 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = EAC3D42318E2A56C00D20AB2 /* Spaceship.png */; };
 		EAC3D42618E2A56C00D20AB2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAC3D42518E2A56C00D20AB2 /* Images.xcassets */; };
+		EAC3D44518E2AAB200D20AB2 /* CDYGameScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC3D44418E2AAB200D20AB2 /* CDYGameScreen.m */; };
+		EAC3D44818E2AAFF00D20AB2 /* CDYGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC3D44718E2AAFF00D20AB2 /* CDYGameView.m */; };
+		EAC3D44B18E2B15B00D20AB2 /* CDYLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC3D44A18E2B15B00D20AB2 /* CDYLoadingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA6E822418E60461009AC2E9 /* SKNode+CDYResizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKNode+CDYResizing.h"; sourceTree = "<group>"; };
+		EA6E822518E60461009AC2E9 /* SKNode+CDYResizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKNode+CDYResizing.m"; sourceTree = "<group>"; };
+		EA6E822718E60871009AC2E9 /* CDYGameKitConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDYGameKitConstants.h; sourceTree = "<group>"; };
 		EAC3D40018E2A56C00D20AB2 /* GameKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC3D40318E2A56C00D20AB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EAC3D40518E2A56C00D20AB2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -43,6 +50,12 @@
 		EAC3D42318E2A56C00D20AB2 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		EAC3D42518E2A56C00D20AB2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EAC3D42C18E2A56C00D20AB2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EAC3D44318E2AAB200D20AB2 /* CDYGameScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDYGameScreen.h; sourceTree = "<group>"; };
+		EAC3D44418E2AAB200D20AB2 /* CDYGameScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDYGameScreen.m; sourceTree = "<group>"; };
+		EAC3D44618E2AAFF00D20AB2 /* CDYGameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDYGameView.h; sourceTree = "<group>"; };
+		EAC3D44718E2AAFF00D20AB2 /* CDYGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDYGameView.m; sourceTree = "<group>"; };
+		EAC3D44918E2B15B00D20AB2 /* CDYLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDYLoadingView.h; sourceTree = "<group>"; };
+		EAC3D44A18E2B15B00D20AB2 /* CDYLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDYLoadingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +76,7 @@
 		EAC3D3F718E2A56C00D20AB2 = {
 			isa = PBXGroup;
 			children = (
+				EAC3D44218E2AA1E00D20AB2 /* Core */,
 				EAC3D40B18E2A56C00D20AB2 /* GameKitDemo */,
 				EAC3D40218E2A56C00D20AB2 /* Frameworks */,
 				EAC3D40118E2A56C00D20AB2 /* Products */,
@@ -116,6 +130,22 @@
 				EAC3D41318E2A56C00D20AB2 /* GameKitDemo-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EAC3D44218E2AA1E00D20AB2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EA6E822718E60871009AC2E9 /* CDYGameKitConstants.h */,
+				EAC3D44318E2AAB200D20AB2 /* CDYGameScreen.h */,
+				EAC3D44418E2AAB200D20AB2 /* CDYGameScreen.m */,
+				EAC3D44618E2AAFF00D20AB2 /* CDYGameView.h */,
+				EAC3D44718E2AAFF00D20AB2 /* CDYGameView.m */,
+				EAC3D44918E2B15B00D20AB2 /* CDYLoadingView.h */,
+				EAC3D44A18E2B15B00D20AB2 /* CDYLoadingView.m */,
+				EA6E822418E60461009AC2E9 /* SKNode+CDYResizing.h */,
+				EA6E822518E60461009AC2E9 /* SKNode+CDYResizing.m */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,7 +215,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAC3D44B18E2B15B00D20AB2 /* CDYLoadingView.m in Sources */,
+				EA6E822618E60461009AC2E9 /* SKNode+CDYResizing.m in Sources */,
 				EAC3D42218E2A56C00D20AB2 /* MyScene.m in Sources */,
+				EAC3D44818E2AAFF00D20AB2 /* CDYGameView.m in Sources */,
+				EAC3D44518E2AAB200D20AB2 /* CDYGameScreen.m in Sources */,
 				EAC3D41F18E2A56C00D20AB2 /* ViewController.m in Sources */,
 				EAC3D41618E2A56C00D20AB2 /* AppDelegate.m in Sources */,
 				EAC3D41218E2A56C00D20AB2 /* main.m in Sources */,
@@ -341,6 +375,7 @@
 				EAC3D43E18E2A56C00D20AB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
