@@ -15,7 +15,10 @@
  */
 
 #import <CDYGameKit/CDYGameView.h>
+#import <CDYGameKit/CDYGameButton.h>
+#import <CDYGameKit/CDYLoadingView.h>
 #import "CDYGameScreen.h"
+#import "CDYGameKitConstants.h"
 
 @implementation CDYGameScreen
 
@@ -60,6 +63,63 @@
         CDYGameView *gameView = (CDYGameView *) node;
         [gameView update:currentTime];
     }
+}
+
+- (void)didMoveToView:(SKView *)view {
+    [super didMoveToView:view];
+
+    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
+    [recognizer setNumberOfTapsRequired:1];
+    [recognizer setNumberOfTouchesRequired:1];
+    [view addGestureRecognizer:recognizer];
+}
+
+- (void)tapped:(UITapGestureRecognizer *)recognizer {
+    CGPoint tapLocation = [self convertPointFromView:[recognizer locationInView:self.view]];
+    NSArray *nodes = [self nodesAtPoint:tapLocation];
+
+    SKNode *topNode = [self.children lastObject];
+    if ([self isLoadingView:topNode]) {
+        CDYGKLog(@"Loading view presented. Ignore tap");
+        return;
+    }
+
+    CDYGameButton *button = [self findTopNodeOfType:[CDYGameButton class] fromNodes:nodes];
+    if (button) {
+        [self handleTapOnButton:button];
+    } else {
+        [self handleTapAtScreenLocation:tapLocation];
+    }
+}
+
+- (BOOL)isLoadingView:(SKNode *)node {
+    return [node isKindOfClass:[CDYLoadingView class]];
+}
+
+- (CDYGameButton *)findTopNodeOfType:(Class)nodeClass fromNodes:(NSArray *)nodes {
+    NSEnumerator *enumerator = [nodes reverseObjectEnumerator];
+    id next;
+    while ((next = [enumerator nextObject]) != nil) {
+        if ([next isKindOfClass:nodeClass]) {
+            return next;
+        }
+    }
+
+    return nil;
+}
+
+- (void)handleTapOnButton:(CDYGameButton *)node {
+    if (node.tapHandler) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            node.tapHandler(node);
+        });
+    } else {
+        CDYGKLog(@"No tap handler on %@", node);
+    }
+}
+
+- (void)handleTapAtScreenLocation:(CGPoint)screenLocation {
+    CDYGKLog(@"handleTapAtScreenLocation:%@", NSStringFromCGPoint(screenLocation));
 }
 
 @end

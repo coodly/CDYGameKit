@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
-static UIViewAutoresizing const CDYGKCenterNodeMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+#import "CDYGameButton.h"
 
-#define CDYGKLog(s, ...) NSLog( @"<%p %@:(%d)> %@", self, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+@implementation CDYGameButton
+
+@end

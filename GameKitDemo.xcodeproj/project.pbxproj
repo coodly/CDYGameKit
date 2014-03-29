@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EA6E822618E60461009AC2E9 /* SKNode+CDYResizing.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6E822518E60461009AC2E9 /* SKNode+CDYResizing.m */; };
+		EA6E822A18E6D9C1009AC2E9 /* CDYGameButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6E822918E6D9C1009AC2E9 /* CDYGameButton.m */; };
 		EAC3D40418E2A56C00D20AB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC3D40318E2A56C00D20AB2 /* Foundation.framework */; };
 		EAC3D40618E2A56C00D20AB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC3D40518E2A56C00D20AB2 /* CoreGraphics.framework */; };
 		EAC3D40818E2A56C00D20AB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC3D40718E2A56C00D20AB2 /* UIKit.framework */; };
@@ -30,6 +31,8 @@
 		EA6E822418E60461009AC2E9 /* SKNode+CDYResizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKNode+CDYResizing.h"; sourceTree = "<group>"; };
 		EA6E822518E60461009AC2E9 /* SKNode+CDYResizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKNode+CDYResizing.m"; sourceTree = "<group>"; };
 		EA6E822718E60871009AC2E9 /* CDYGameKitConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDYGameKitConstants.h; sourceTree = "<group>"; };
+		EA6E822818E6D9C1009AC2E9 /* CDYGameButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDYGameButton.h; sourceTree = "<group>"; };
+		EA6E822918E6D9C1009AC2E9 /* CDYGameButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDYGameButton.m; sourceTree = "<group>"; };
 		EAC3D40018E2A56C00D20AB2 /* GameKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC3D40318E2A56C00D20AB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EAC3D40518E2A56C00D20AB2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -135,6 +138,8 @@
 		EAC3D44218E2AA1E00D20AB2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EA6E822818E6D9C1009AC2E9 /* CDYGameButton.h */,
+				EA6E822918E6D9C1009AC2E9 /* CDYGameButton.m */,
 				EA6E822718E60871009AC2E9 /* CDYGameKitConstants.h */,
 				EAC3D44318E2AAB200D20AB2 /* CDYGameScreen.h */,
 				EAC3D44418E2AAB200D20AB2 /* CDYGameScreen.m */,
@@ -219,6 +224,7 @@
 				EA6E822618E60461009AC2E9 /* SKNode+CDYResizing.m in Sources */,
 				EAC3D42218E2A56C00D20AB2 /* MyScene.m in Sources */,
 				EAC3D44818E2AAFF00D20AB2 /* CDYGameView.m in Sources */,
+				EA6E822A18E6D9C1009AC2E9 /* CDYGameButton.m in Sources */,
 				EAC3D44518E2AAB200D20AB2 /* CDYGameScreen.m in Sources */,
 				EAC3D41F18E2A56C00D20AB2 /* ViewController.m in Sources */,
 				EAC3D41618E2A56C00D20AB2 /* AppDelegate.m in Sources */,

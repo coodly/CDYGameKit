@@ -14,6 +14,14 @@
  * limitations under the License.
  */
 
-static UIViewAutoresizing const CDYGKCenterNodeMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+#import <SpriteKit/SpriteKit.h>
 
-#define CDYGKLog(s, ...) NSLog( @"<%p %@:(%d)> %@", self, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+@class CDYGameButton;
+
+typedef void (^CDYGameKitButtonAction)(CDYGameButton *button);
+
+@interface CDYGameButton : SKSpriteNode
+
+@property (nonatomic, copy) CDYGameKitButtonAction tapHandler;
+
+@end
