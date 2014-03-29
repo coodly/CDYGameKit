@@ -49,4 +49,17 @@
 
 }
 
+- (void)update:(NSTimeInterval)currentTime {
+    [super update:currentTime];
+
+    for (SKNode *node in self.children) {
+        if (![node isKindOfClass:[CDYGameView class]]) {
+            continue;
+        }
+
+        CDYGameView *gameView = (CDYGameView *) node;
+        [gameView update:currentTime];
+    }
+}
+
 @end

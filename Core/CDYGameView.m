@@ -45,6 +45,10 @@
 
 }
 
+- (void)update:(NSTimeInterval)interval {
+
+}
+
 - (void)positionNode:(SKNode *)node usingAutoresizing:(UIViewAutoresizing)autoresizing {
     if ((autoresizing | CDYGKCenterNodeMask) == CDYGKCenterNodeMask) {
         [self centerNode:node];
@@ -52,9 +56,7 @@
 }
 
 - (void)centerNode:(SKNode *)node {
-    CGPoint position = CGPointMake((CGRectGetWidth(self.frame) - CGRectGetWidth(node.frame)) / 2, (CGRectGetHeight(self.frame) - CGRectGetHeight(node.frame)) / 2);
-    position.x -= node.frame.origin.x;
-    position.y -= node.frame.origin.y;
+    CGPoint position = CGPointMake(CGRectGetWidth(self.frame) / 2, CGRectGetHeight(self.frame) / 2);
     [node setPosition:position];
 }
 

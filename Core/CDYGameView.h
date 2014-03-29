@@ -21,5 +21,6 @@
 - (void)presentLoadingView:(CDYGameView *)view;
 - (void)positionContent;
 - (void)loadContent;
+- (void)update:(NSTimeInterval)interval;
 
 @end
