@@ -75,14 +75,14 @@
 }
 
 - (void)tapped:(UITapGestureRecognizer *)recognizer {
-    CGPoint tapLocation = [self convertPointFromView:[recognizer locationInView:self.view]];
-    NSArray *nodes = [self nodesAtPoint:tapLocation];
-
     SKNode *topNode = [self.children lastObject];
     if ([self isLoadingView:topNode]) {
         CDYGKLog(@"Loading view presented. Ignore tap");
         return;
     }
+
+    CGPoint tapLocation = [self convertPointFromView:[recognizer locationInView:self.view]];
+    NSArray *nodes = [self nodesAtPoint:tapLocation];
 
     CDYGameButton *button = [self findTopNodeOfType:[CDYGameButton class] fromNodes:nodes];
     if (button) {
