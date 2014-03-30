@@ -14,11 +14,8 @@
  * limitations under the License.
  */
 
-static UIViewAutoresizing const CDYGKCenterNodeMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+#import "CDYGameKitConstants.h"
 
-#define CDYGKLog(s, ...) NSLog( @"<%p %@:(%d)> %@", self, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
-
-
-typedef void (^CDYGameActionBlock)();
-
-void CDYGKDelayedExecution(CGFloat seconds, CDYGameActionBlock action);
+void CDYGKDelayedExecution(CGFloat seconds, CDYGameActionBlock action) {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, seconds * NSEC_PER_SEC), dispatch_get_main_queue(), action);
+}
